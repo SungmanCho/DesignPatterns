@@ -10,13 +10,10 @@ public class Main {
 	public static void main(String[] args) {
 		Aspect aspect = new Rule();
 		
+		
 		aspect = new BeforeProcess(
-				new AfterProcess(
-						new ErrorProcess(
-								new MainProcess(aspect)
-						)
-				)
-		);
+					new MainProcess(new AfterProcess(aspect), new ErrorProcess())
+				);
 		
 		aspect.process();
 		

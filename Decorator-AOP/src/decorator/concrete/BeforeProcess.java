@@ -10,14 +10,9 @@ public class BeforeProcess extends AddProcess {
 	}
 	
 	@Override
-	public void before() {
+	public void process() {
 		System.out.println("½ÇÇà Àü...");
+		super.process();
 	}
 	
-	@Override
-	public void after() {}
-	
-	@Override
-	public void error() {}
-
 }
